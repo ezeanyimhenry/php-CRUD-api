@@ -88,7 +88,7 @@ function createPerson()
     $name = $data["name"];
     $sql = "INSERT INTO persons (name) VALUES (?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssss", $name);
+    $stmt->bind_param("s", $name);
     if ($stmt->execute()) {
         http_response_code(201); // Created
         echo json_encode(array("message" => "Person created."));
@@ -105,7 +105,7 @@ function updatePerson($id)
     $name = $data["name"];
     $sql = "UPDATE persons SET name = ? WHERE id = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssi", $name, $id);
+    $stmt->bind_param("si", $name, $id);
     if ($stmt->execute()) {
         echo json_encode(array("message" => "Person updated."));
     } else {
