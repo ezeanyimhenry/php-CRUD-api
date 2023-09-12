@@ -31,6 +31,7 @@ Before you begin, make sure you have the following:
 
 2. Configure the database connection by editing config.php:
 
+    ```shell
     $hostname = "your_database_host";
     $username = "your_database_username";
     $password = "your_database_password";
@@ -48,16 +49,18 @@ Before you begin, make sure you have the following:
 
 #### Request Body:
 
+```shell
 {
   "name": "John",
 }
-
+```
 #### Response:
 
+```shell
 {
   "message": "Person created."
 }
-
+```
 ### Retrieve a Person by ID
 #### URL: /api/persons.php?id={person_id}
 
@@ -65,11 +68,12 @@ Before you begin, make sure you have the following:
 
 #### Response:
 
+```shell
 {
   "id": 1,
   "name": "John",
 }
-
+```
 ### Update a Person by ID
 #### URL: /api/persons.php?id={person_id}
 
@@ -77,16 +81,18 @@ Before you begin, make sure you have the following:
 
 #### Request Body:
 
+```shell
 {
   "name": "Updated",
 }
-
+```
 #### Responce:
 
+```shell
 {
   "message": "Person updated."
 }
-
+```
 ### Delete a Person by ID
 #### URL: /api/persons.php?id={person_id}
 
@@ -94,10 +100,11 @@ Before you begin, make sure you have the following:
 
 #### Response:
 
+```shell
 {
   "message": "Person deleted."
 }
-
+```
 ### Security
 Ensure that you implement proper authentication and authorization mechanisms based on your application requirements.
 Sanitize user inputs and use prepared statements to prevent SQL injection attacks.
