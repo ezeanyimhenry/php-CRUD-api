@@ -36,8 +36,16 @@ Before you begin, make sure you have the following:
     $username = "your_database_username";
     $password = "your_database_password";
     $database = "your_database_name";
+    ```
 
 3. Import the SQL schema into your database to create the persons table.
+
+```shell
+    CREATE TABLE persons (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(50) NOT NULL,
+    );
+```
 
 4. Ensure that your web server is correctly configured to serve PHP files.
 
